@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HKB Labs — Studio de développement d'applications</title>
-<meta name="description" content="HKB Labs conçoit et développe des applications et sites web sur-mesure. Découvrez nos projets, dont LYSOMBA.">
+<title>HKB Labs — Studio de solutions digitales</title>
+<meta name="description" content="HKB Labs conçoit et développe des solutions digitales sur-mesure — applications, sites web, outils métier. Découvrez nos projets, dont LYSOMBA.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="styles.css">
+<script>
+  try {
+    var l = localStorage.getItem('hkb-lang');
+    if (l !== 'fr' && l !== 'en') l = (navigator.language || '').slice(0, 2).toLowerCase() === 'en' ? 'en' : 'fr';
+  } catch (e) { var l = 'fr'; }
+  document.documentElement.setAttribute('data-lang', l);
+  document.documentElement.lang = l;
+</script>
 </head>
 <body>
 
@@ -21,12 +29,18 @@
         <path d="M55.00,44.06 L56.48,44.06 L56.48,53.76 L61.80,53.76 L61.80,55.00 L55.00,55.00 L55.00,44.06 Z M86.39,45.52 L84.38,50.96 L88.41,50.96 L86.39,45.52 Z M85.56,44.06 L87.23,44.06 L91.40,55.00 L89.86,55.00 L88.87,52.19 L83.94,52.19 L82.94,55.00 L81.38,55.00 L85.56,44.06 Z M112.46,49.78 L112.46,53.78 L114.83,53.78 Q116.03,53.78 116.60,53.29 Q117.18,52.79 117.18,51.78 Q117.18,50.75 116.60,50.27 Q116.03,49.78 114.83,49.78 L112.46,49.78 Z M112.46,45.28 L112.46,48.58 L114.65,48.58 Q115.73,48.58 116.26,48.17 Q116.80,47.76 116.80,46.93 Q116.80,46.10 116.26,45.69 Q115.73,45.28 114.65,45.28 L112.46,45.28 Z M110.98,44.06 L114.76,44.06 Q116.45,44.06 117.37,44.77 Q118.28,45.47 118.28,46.77 Q118.28,47.77 117.81,48.36 Q117.35,48.96 116.44,49.10 Q117.53,49.34 118.13,50.08 Q118.74,50.83 118.74,51.94 Q118.74,53.40 117.74,54.20 Q116.75,55.00 114.91,55.00 L110.98,55.00 L110.98,44.06 Z M145.35,44.42 L145.35,45.87 Q144.51,45.46 143.77,45.27 Q143.02,45.07 142.32,45.07 Q141.12,45.07 140.46,45.54 Q139.80,46.00 139.80,46.87 Q139.80,47.60 140.24,47.97 Q140.67,48.33 141.89,48.56 L142.78,48.74 Q144.44,49.06 145.23,49.86 Q146.01,50.65 146.01,51.98 Q146.01,53.57 144.95,54.39 Q143.88,55.21 141.83,55.21 Q141.05,55.21 140.17,55.04 Q139.30,54.86 138.36,54.52 L138.36,52.99 Q139.26,53.50 140.13,53.76 Q140.99,54.01 141.83,54.01 Q143.09,54.01 143.78,53.51 Q144.47,53.01 144.47,52.09 Q144.47,51.29 143.97,50.83 Q143.48,50.38 142.35,50.15 L141.45,49.98 Q139.80,49.65 139.05,48.94 Q138.32,48.24 138.32,46.99 Q138.32,45.54 139.34,44.70 Q140.36,43.87 142.15,43.87 Q142.92,43.87 143.72,44.01 Q144.52,44.15 145.35,44.42 Z" fill="#6B6B63"/>
       </svg>
     </a>
-    <nav class="main-nav">
-      <a href="#about">À propos</a>
-      <a href="#projects">Projets</a>
-      <a href="#contact">Contact</a>
-      <a href="privacy.html">Confidentialité</a>
-    </nav>
+    <div class="header-right">
+      <nav class="main-nav">
+        <a href="#about"><span data-lang="fr">À propos</span><span data-lang="en">About</span></a>
+        <a href="#projects"><span data-lang="fr">Projets</span><span data-lang="en">Projects</span></a>
+        <a href="#contact"><span data-lang="fr">Contact</span><span data-lang="en">Contact</span></a>
+        <a href="privacy.html"><span data-lang="fr">Confidentialité</span><span data-lang="en">Privacy</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -35,12 +49,14 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow">Studio de développement</span>
-        <h1 class="hero-title">Des applications construites avec <em>rigueur</em>, livrées avec <em>vitesse</em>.</h1>
-        <p class="hero-sub">HKB Labs conçoit et développe des applications et des expériences digitales sur-mesure — avec la fiabilité d'un partenaire de confiance et l'énergie d'un vrai laboratoire.</p>
+        <span class="eyebrow"><span data-lang="fr">Studio de développement</span><span data-lang="en">Development studio</span></span>
+        <h1 class="hero-title" data-lang="fr">Des solutions digitales construites avec <em>rigueur</em>, livrées avec <em>vitesse</em>.</h1>
+        <h1 class="hero-title" data-lang="en">Digital solutions built with <em>rigor</em>, delivered with <em>speed</em>.</h1>
+        <p class="hero-sub" data-lang="fr">HKB Labs conçoit et développe des solutions digitales sur-mesure — applications, sites web, CRM et outils métier — avec la fiabilité d'un partenaire de confiance et l'énergie d'un vrai laboratoire.</p>
+        <p class="hero-sub" data-lang="en">HKB Labs designs and builds custom digital solutions — apps, websites, CRMs and business tools — with the reliability of a trusted partner and the energy of a real lab.</p>
         <div class="cta-row">
-          <a href="#projects" class="btn btn-primary">Voir les projets</a>
-          <a href="#contact" class="btn btn-ghost">Nous contacter</a>
+          <a href="#projects" class="btn btn-primary"><span data-lang="fr">Voir les projets</span><span data-lang="en">View projects</span></a>
+          <a href="#contact" class="btn btn-ghost"><span data-lang="fr">Nous contacter</span><span data-lang="en">Get in touch</span></a>
         </div>
       </div>
       <div class="hero-mark">
@@ -56,28 +72,31 @@
   <section id="about">
     <div class="wrap">
       <div class="section-head">
-        <h2 class="section-title">Ce qui nous guide</h2>
-        <p class="section-note">Une structure à taille humaine, pensée pour durer.</p>
+        <h2 class="section-title" data-lang="fr">Ce qui nous guide</h2>
+        <h2 class="section-title" data-lang="en">What guides us</h2>
+        <p class="section-note" data-lang="fr">Une structure à taille humaine, pensée pour durer.</p>
+        <p class="section-note" data-lang="en">A human-scale studio, built to last.</p>
       </div>
       <div class="about-grid">
-        <p>
+        <p data-lang="fr">
           HKB Labs est né d'une conviction simple&nbsp;: on peut construire des produits digitaux exigeants
           sans la lourdeur d'une grande agence, ni l'instabilité d'un freelance isolé. Chaque projet est
           traité avec la même rigueur, qu'il s'agisse d'une application mobile ou de la refonte d'un site existant.
         </p>
-        <ul class="values">
-          <li>
-            <span class="mark">→</span>
-            <div><strong>Précision</strong><span class="desc">Chaque détail compte, du code à l'interface.</span></div>
-          </li>
-          <li>
-            <span class="mark">→</span>
-            <div><strong>Fiabilité</strong><span class="desc">Un partenaire qui reste joignable, pas une boîte noire.</span></div>
-          </li>
-          <li>
-            <span class="mark">→</span>
-            <div><strong>Vitesse d'exécution</strong><span class="desc">Livrer vite, sans sacrifier la qualité.</span></div>
-          </li>
+        <p data-lang="en">
+          HKB Labs was born from a simple conviction&nbsp;: you can build demanding digital products without
+          the weight of a large agency or the instability of a lone freelancer. Every project gets the same
+          rigor, whether it's a mobile app or the redesign of an existing website.
+        </p>
+        <ul class="values" data-lang="fr">
+          <li><span class="mark">→</span><div><strong>Précision</strong><span class="desc">Chaque détail compte, du code à l'interface.</span></div></li>
+          <li><span class="mark">→</span><div><strong>Fiabilité</strong><span class="desc">Un partenaire qui reste joignable, pas une boîte noire.</span></div></li>
+          <li><span class="mark">→</span><div><strong>Vitesse d'exécution</strong><span class="desc">Livrer vite, sans sacrifier la qualité.</span></div></li>
+        </ul>
+        <ul class="values" data-lang="en">
+          <li><span class="mark">→</span><div><strong>Precision</strong><span class="desc">Every detail matters, from the code to the interface.</span></div></li>
+          <li><span class="mark">→</span><div><strong>Reliability</strong><span class="desc">A partner who stays reachable, not a black box.</span></div></li>
+          <li><span class="mark">→</span><div><strong>Speed of execution</strong><span class="desc">Ship fast, without sacrificing quality.</span></div></li>
         </ul>
       </div>
     </div>
@@ -86,20 +105,23 @@
   <section id="projects">
     <div class="wrap">
       <div class="section-head">
-        <h2 class="section-title">Nos projets</h2>
-        <p class="section-note">Applications et sites conçus et maintenus par HKB Labs.</p>
+        <h2 class="section-title" data-lang="fr">Nos projets</h2>
+        <h2 class="section-title" data-lang="en">Our projects</h2>
+        <p class="section-note" data-lang="fr">Applications et sites conçus et maintenus par HKB Labs.</p>
+        <p class="section-note" data-lang="en">Apps and websites designed and maintained by HKB Labs.</p>
       </div>
       <div class="project-grid">
         <div class="project-card">
           <span class="status-tag">MVP</span>
           <h3>LYSOMBA</h3>
-          <p>Application mobile. En phase de MVP fonctionnel — les prochaines étapes seront annoncées ici au fil de son développement.</p>
+          <p data-lang="fr">Application mobile. En phase de MVP fonctionnel — les prochaines étapes seront annoncées ici au fil de son développement.</p>
+          <p data-lang="en">Mobile app. In functional MVP stage — next steps will be announced here as development continues.</p>
         </div>
         <div class="project-card placeholder">
-          <span class="status-tag">À venir</span>
+          <span class="status-tag"><span data-lang="fr">À venir</span><span data-lang="en">Coming soon</span></span>
         </div>
         <div class="project-card placeholder">
-          <span class="status-tag">À venir</span>
+          <span class="status-tag"><span data-lang="fr">À venir</span><span data-lang="en">Coming soon</span></span>
         </div>
       </div>
     </div>
@@ -108,12 +130,18 @@
   <section id="contact">
     <div class="wrap">
       <div class="section-head">
-        <h2 class="section-title">Nous contacter</h2>
-        <p class="section-note">Une question, un projet&nbsp;? Écrivez-nous.</p>
+        <h2 class="section-title" data-lang="fr">Nous contacter</h2>
+        <h2 class="section-title" data-lang="en">Get in touch</h2>
+        <p class="section-note" data-lang="fr">Une question, un projet&nbsp;? Écrivez-nous.</p>
+        <p class="section-note" data-lang="en">A question, a project&nbsp;? Drop us a line.</p>
       </div>
-      <p style="max-width:52ch;color:var(--ink-70);font-size:16px;">
+      <p style="max-width:52ch;color:var(--ink-70);font-size:16px;" data-lang="fr">
         Pour toute question concernant HKB Labs, ses applications, ou une demande de collaboration,
         contactez-nous à <a href="mailto:hkb.labs.contact@gmail.com" style="color:var(--brass);font-weight:600;text-decoration:none;">hkb.labs.contact@gmail.com</a>.
+      </p>
+      <p style="max-width:52ch;color:var(--ink-70);font-size:16px;" data-lang="en">
+        For any question about HKB Labs, its applications, or a collaboration inquiry,
+        reach us at <a href="mailto:hkb.labs.contact@gmail.com" style="color:var(--brass);font-weight:600;text-decoration:none;">hkb.labs.contact@gmail.com</a>.
       </p>
     </div>
   </section>
@@ -124,11 +152,23 @@
   <div class="wrap">
     <span class="footer-copy">© 2026 HKB Labs</span>
     <ul class="footer-links">
-      <li><a href="privacy.html">Politique de confidentialité</a></li>
+      <li><a href="privacy.html"><span data-lang="fr">Politique de confidentialité</span><span data-lang="en">Privacy policy</span></a></li>
       <li><a href="mailto:hkb.labs.contact@gmail.com">Contact</a></li>
     </ul>
   </div>
 </footer>
+
+<script>
+  window.HKB_TITLES = {
+    fr: "HKB Labs — Studio de solutions digitales",
+    en: "HKB Labs — Digital solutions studio"
+  };
+  window.HKB_DESCRIPTIONS = {
+    fr: "HKB Labs conçoit et développe des solutions digitales sur-mesure — applications, sites web, outils métier. Découvrez nos projets, dont LYSOMBA.",
+    en: "HKB Labs designs and builds custom digital solutions — apps, websites, business tools. Discover our projects, including LYSOMBA."
+  };
+</script>
+<script src="lang.js"></script>
 
 </body>
 </html>

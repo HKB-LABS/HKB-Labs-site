@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,14 @@
 <meta name="description" content="Politique de confidentialité de HKB Labs et de ses applications, dont LYSOMBA.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="styles.css">
+<script>
+  try {
+    var l = localStorage.getItem('hkb-lang');
+    if (l !== 'fr' && l !== 'en') l = (navigator.language || '').slice(0, 2).toLowerCase() === 'en' ? 'en' : 'fr';
+  } catch (e) { var l = 'fr'; }
+  document.documentElement.setAttribute('data-lang', l);
+  document.documentElement.lang = l;
+</script>
 </head>
 <body>
 
@@ -21,56 +29,82 @@
         <path d="M55.00,44.06 L56.48,44.06 L56.48,53.76 L61.80,53.76 L61.80,55.00 L55.00,55.00 L55.00,44.06 Z M86.39,45.52 L84.38,50.96 L88.41,50.96 L86.39,45.52 Z M85.56,44.06 L87.23,44.06 L91.40,55.00 L89.86,55.00 L88.87,52.19 L83.94,52.19 L82.94,55.00 L81.38,55.00 L85.56,44.06 Z M112.46,49.78 L112.46,53.78 L114.83,53.78 Q116.03,53.78 116.60,53.29 Q117.18,52.79 117.18,51.78 Q117.18,50.75 116.60,50.27 Q116.03,49.78 114.83,49.78 L112.46,49.78 Z M112.46,45.28 L112.46,48.58 L114.65,48.58 Q115.73,48.58 116.26,48.17 Q116.80,47.76 116.80,46.93 Q116.80,46.10 116.26,45.69 Q115.73,45.28 114.65,45.28 L112.46,45.28 Z M110.98,44.06 L114.76,44.06 Q116.45,44.06 117.37,44.77 Q118.28,45.47 118.28,46.77 Q118.28,47.77 117.81,48.36 Q117.35,48.96 116.44,49.10 Q117.53,49.34 118.13,50.08 Q118.74,50.83 118.74,51.94 Q118.74,53.40 117.74,54.20 Q116.75,55.00 114.91,55.00 L110.98,55.00 L110.98,44.06 Z M145.35,44.42 L145.35,45.87 Q144.51,45.46 143.77,45.27 Q143.02,45.07 142.32,45.07 Q141.12,45.07 140.46,45.54 Q139.80,46.00 139.80,46.87 Q139.80,47.60 140.24,47.97 Q140.67,48.33 141.89,48.56 L142.78,48.74 Q144.44,49.06 145.23,49.86 Q146.01,50.65 146.01,51.98 Q146.01,53.57 144.95,54.39 Q143.88,55.21 141.83,55.21 Q141.05,55.21 140.17,55.04 Q139.30,54.86 138.36,54.52 L138.36,52.99 Q139.26,53.50 140.13,53.76 Q140.99,54.01 141.83,54.01 Q143.09,54.01 143.78,53.51 Q144.47,53.01 144.47,52.09 Q144.47,51.29 143.97,50.83 Q143.48,50.38 142.35,50.15 L141.45,49.98 Q139.80,49.65 139.05,48.94 Q138.32,48.24 138.32,46.99 Q138.32,45.54 139.34,44.70 Q140.36,43.87 142.15,43.87 Q142.92,43.87 143.72,44.01 Q144.52,44.15 145.35,44.42 Z" fill="#6B6B63"/>
       </svg>
     </a>
-    <nav class="main-nav">
-      <a href="index.html#about">À propos</a>
-      <a href="index.html#projects">Projets</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="privacy.html">Confidentialité</a>
-    </nav>
+    <div class="header-right">
+      <nav class="main-nav">
+        <a href="index.html#about"><span data-lang="fr">À propos</span><span data-lang="en">About</span></a>
+        <a href="index.html#projects"><span data-lang="fr">Projets</span><span data-lang="en">Projects</span></a>
+        <a href="index.html#contact"><span data-lang="fr">Contact</span><span data-lang="en">Contact</span></a>
+        <a href="privacy.html"><span data-lang="fr">Confidentialité</span><span data-lang="en">Privacy</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
-  <div class="legal">
-    <h1>Politique de confidentialité</h1>
-    <span class="updated">Dernière mise à jour : à compléter à la publication</span>
 
-    <p>
-      Cette politique de confidentialité décrit comment HKB Labs (« nous ») traite les informations
-      dans le cadre de ses applications et services, dont LYSOMBA. Elle s'applique à toutes les
-      applications publiées par HKB Labs sur l'App Store et Google Play, sauf mention contraire
-      indiquée dans la section propre à chaque application ci-dessous.
+  <!-- ============ FRANÇAIS ============ -->
+  <div class="legal" data-lang="fr">
+    <h1>Politique de confidentialité</h1>
+    <span class="updated">En vigueur depuis le 29 août 2026</span>
+
+    <p class="lead">
+      Cette politique décrit comment HKB Labs («&nbsp;HKB Labs&nbsp;», «&nbsp;nous&nbsp;») traite les
+      données dans le cadre de ses applications et services, dont LYSOMBA. Elle s'applique à toutes les
+      applications publiées par HKB Labs sur l'App Store d'Apple et sur Google Play, sauf mention
+      contraire dans la section dédiée à une application ci-dessous.
     </p>
 
     <h2>Qui nous sommes</h2>
     <p>
-      HKB Labs est un studio de développement d'applications et de sites web. Pour toute question sur
-      cette politique ou sur le traitement de vos données, vous pouvez nous contacter à
+      HKB Labs est un studio de développement d'applications et de sites web, exploité en France sous
+      le régime de la micro-entreprise. Pour toute question sur cette politique ou sur le traitement de
+      vos données, écrivez-nous à
       <a href="mailto:hkb.labs.contact@gmail.com" style="color:var(--brass);font-weight:600;">hkb.labs.contact@gmail.com</a>.
     </p>
 
-    <h2>Principe général</h2>
-    <p>
-      Sauf indication contraire dans la section dédiée à une application spécifique, nos applications
-      ne collectent, ne stockent et ne partagent aucune donnée personnelle identifiable. Elles ne
-      nécessitent pas de création de compte et ne demandent pas d'accès à des données sensibles de
-      votre appareil (localisation, contacts, photos, caméra).
-    </p>
+    <h2>Principe général&nbsp;: aucune collecte</h2>
+    <p>Nos applications sont conçues pour fonctionner sans collecte de données. Sauf indication contraire dans la section propre à une application&nbsp;:</p>
+    <ul>
+      <li>aucune création de compte n'est requise&nbsp;;</li>
+      <li>aucune donnée personnelle identifiable n'est collectée, transmise à nos serveurs, ni vendue&nbsp;;</li>
+      <li>aucun accès aux données sensibles de l'appareil (localisation, contacts, photos, caméra, microphone) n'est demandé&nbsp;;</li>
+      <li>aucun outil tiers de suivi, de mesure d'audience, de publicité ou de paiement n'est intégré.</li>
+    </ul>
 
     <h2>Applications</h2>
 
     <div class="app-policy-block">
       <h3 style="font-family:var(--body);font-size:17px;margin:0 0 8px;">LYSOMBA</h3>
       <p>
-        LYSOMBA ne requiert pas de création de compte. L'application n'accède à aucune donnée
-        sensible de votre appareil (localisation, photos, caméra, contacts) et n'intègre actuellement
-        aucun outil tiers (pas d'analyse d'usage, pas de publicité, pas de module de paiement).
-        Aucune donnée personnelle n'est collectée par l'application à ce jour.
+        LYSOMBA est une application mobile de gestion de listes qui fonctionne entièrement sur votre
+        appareil.
       </p>
       <p>
-        Si cela devait évoluer (par exemple avec l'ajout d'un compte utilisateur ou d'un outil
-        d'analyse), cette section sera mise à jour avant la publication de la nouvelle version, et
-        la date en haut de cette page sera actualisée en conséquence.
+        <strong>Données créées et stockées localement.</strong> Votre prénom (si vous le renseignez),
+        vos listes, vos magasins, vos modèles et vos préférences (thème, langue) sont enregistrés
+        uniquement dans le stockage local de votre appareil. Ces informations ne sont jamais transmises
+        à HKB Labs ni à un tiers, et ne quittent pas votre téléphone.
+      </p>
+      <p>
+        <strong>Partage de listes.</strong> Lorsque vous choisissez de partager une liste, LYSOMBA
+        génère un fichier et utilise la fonction de partage native de votre téléphone (SMS, e-mail,
+        messagerie…). C'est vous qui choisissez le destinataire et le moyen d'envoi&nbsp;; LYSOMBA n'a
+        connaissance ni du contenu transmis ni du destinataire, et ne conserve aucune trace du partage.
+      </p>
+      <p>
+        <strong>Autorisations et services.</strong> LYSOMBA ne demande aucune autorisation d'accès à
+        des données sensibles de l'appareil, n'utilise aucun serveur ou compte en ligne, et n'intègre
+        aucun SDK tiers&nbsp;: pas d'analyse d'usage, pas de publicité, pas de traceur, pas de module
+        de paiement.
+      </p>
+      <p>
+        Si cela devait évoluer (ajout d'un compte, d'une synchronisation, de notifications ou d'un
+        outil de mesure), cette section serait mise à jour et la date «&nbsp;En vigueur depuis&nbsp;»
+        actualisée avant la publication de la version concernée.
       </p>
     </div>
 
@@ -78,25 +112,56 @@
       Les futures applications de HKB Labs seront documentées ici au fur et à mesure de leur publication.
     </p>
 
-    <h2>Données techniques et journaux</h2>
+    <h2>Conservation et suppression des données</h2>
     <p>
-      Comme la plupart des services techniques (hébergement, boutiques d'applications), des données
-      techniques minimales peuvent être traitées automatiquement par des tiers d'infrastructure
-      (par exemple votre hébergeur ou l'App Store/Google Play eux-mêmes) indépendamment de HKB Labs.
-      Ces traitements relèvent des politiques de confidentialité de ces plateformes respectives.
+      HKB Labs ne recevant ni ne stockant aucune donnée personnelle vous concernant, il n'y a aucune
+      donnée à conserver ou à supprimer sur nos serveurs. Les données créées dans l'application restent
+      sur votre appareil aussi longtemps que l'application est installée. Vous pouvez les supprimer à
+      tout moment&nbsp;:
+    </p>
+    <ul>
+      <li>en supprimant vos listes, magasins ou modèles directement dans l'application&nbsp;;</li>
+      <li>en effaçant les données de l'application dans les réglages de votre téléphone&nbsp;;</li>
+      <li>en désinstallant l'application, ce qui supprime l'ensemble des données locales.</li>
+    </ul>
+
+    <h2>Données techniques traitées par des tiers</h2>
+    <p>
+      L'App Store, Google Play et notre hébergeur (GitHub Pages) peuvent traiter automatiquement des
+      données techniques minimales (journaux de connexion, statistiques de téléchargement ou rapports
+      de plantage fournis par la boutique) indépendamment de HKB Labs. Ces traitements relèvent des
+      politiques de confidentialité respectives d'Apple, de Google et de GitHub. HKB Labs peut
+      consulter des statistiques agrégées et anonymes fournies par les stores (nombre de
+      téléchargements, rapports de plantage), sans possibilité d'identifier un utilisateur.
     </p>
 
-    <h2>Confidentialité des mineurs</h2>
+    <h2>Confidentialité des enfants</h2>
     <p>
-      Nos applications ne sont pas spécifiquement destinées aux enfants de moins de 13 ans et ne
-      collectent sciemment aucune donnée les concernant.
+      Nos applications ne sont pas destinées aux enfants de moins de 13&nbsp;ans et ne collectent
+      sciemment aucune donnée les concernant. Si vous pensez qu'un enfant nous a communiqué des
+      données, contactez-nous&nbsp;; comme aucune donnée n'est stockée de notre côté, aucune
+      suppression sur serveur ne sera nécessaire.
+    </p>
+
+    <h2>Vos droits</h2>
+    <p>
+      Le Règlement général sur la protection des données (RGPD) vous accorde des droits d'accès, de
+      rectification, d'effacement, d'opposition et de portabilité. HKB Labs ne détenant aucune donnée
+      personnelle vous concernant, ces droits n'ont pas d'objet à notre égard&nbsp;: vous gardez le
+      contrôle total de vos données directement sur votre appareil (voir «&nbsp;Conservation et
+      suppression&nbsp;»). Pour toute question, écrivez-nous à
+      <a href="mailto:hkb.labs.contact@gmail.com" style="color:var(--brass);font-weight:600;">hkb.labs.contact@gmail.com</a>.
+      Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la Commission nationale
+      de l'informatique et des libertés (CNIL,
+      <a href="https://www.cnil.fr" style="color:var(--brass);font-weight:600;">www.cnil.fr</a>).
     </p>
 
     <h2>Modifications de cette politique</h2>
     <p>
-      Cette politique peut être mise à jour, notamment lors de l'ajout de nouvelles fonctionnalités
-      ou de nouvelles applications. La date de mise à jour en haut de cette page reflète la version
-      la plus récente.
+      Cette politique peut être mise à jour, notamment lors de l'ajout de fonctionnalités ou de
+      nouvelles applications. La date «&nbsp;En vigueur depuis&nbsp;» en haut de cette page indique la
+      version la plus récente. Les changements importants seront signalés dans l'application concernée
+      ou sur cette page.
     </p>
 
     <h2>Contact</h2>
@@ -105,17 +170,147 @@
       <a href="mailto:hkb.labs.contact@gmail.com" style="color:var(--brass);font-weight:600;">hkb.labs.contact@gmail.com</a>
     </p>
   </div>
+
+  <!-- ============ ENGLISH ============ -->
+  <div class="legal" data-lang="en">
+    <h1>Privacy Policy</h1>
+    <span class="updated">Effective 29 August 2026</span>
+
+    <p class="lead">
+      This policy describes how HKB Labs (“HKB Labs”, “we”) handles data in connection with its
+      applications and services, including LYSOMBA. It applies to every application published by
+      HKB Labs on Apple's App Store and on Google Play, unless stated otherwise in the
+      application-specific section below.
+    </p>
+
+    <h2>Who we are</h2>
+    <p>
+      HKB Labs is an app and website development studio, operated in France as a sole proprietorship
+      (<em>micro-entreprise</em>). For any question about this policy or about how your data is
+      handled, contact us at
+      <a href="mailto:hkb.labs.contact@gmail.com" style="color:var(--brass);font-weight:600;">hkb.labs.contact@gmail.com</a>.
+    </p>
+
+    <h2>General principle: no collection</h2>
+    <p>Our applications are designed to work without collecting data. Unless stated otherwise in an application-specific section:</p>
+    <ul>
+      <li>no account creation is required;</li>
+      <li>no personally identifiable data is collected, sent to our servers, or sold;</li>
+      <li>no access to sensitive device data (location, contacts, photos, camera, microphone) is requested;</li>
+      <li>no third-party tracking, analytics, advertising, or payment tool is integrated.</li>
+    </ul>
+
+    <h2>Applications</h2>
+
+    <div class="app-policy-block">
+      <h3 style="font-family:var(--body);font-size:17px;margin:0 0 8px;">LYSOMBA</h3>
+      <p>
+        LYSOMBA is a mobile list-management app that runs entirely on your device.
+      </p>
+      <p>
+        <strong>Data created and stored locally.</strong> Your first name (if you provide it), your
+        lists, stores, templates, and preferences (theme, language) are saved only in your device's
+        local storage. This information is never transmitted to HKB Labs or any third party and does
+        not leave your phone.
+      </p>
+      <p>
+        <strong>Sharing lists.</strong> When you choose to share a list, LYSOMBA generates a file and
+        uses your phone's native share function (SMS, email, messaging apps…). You choose the recipient
+        and the method; LYSOMBA has no knowledge of the content sent or the recipient, and keeps no
+        record of the share.
+      </p>
+      <p>
+        <strong>Permissions and services.</strong> LYSOMBA requests no permission to access sensitive
+        device data, uses no online server or account, and includes no third-party SDK: no usage
+        analytics, no advertising, no tracker, no payment module.
+      </p>
+      <p>
+        If this changes (adding an account, sync, notifications, or an analytics tool), this section
+        will be updated and the “Effective” date revised before the relevant version is published.
+      </p>
+    </div>
+
+    <p style="color:var(--muted);font-size:14px;font-style:italic;">
+      Future HKB Labs applications will be documented here as they are published.
+    </p>
+
+    <h2>Data retention and deletion</h2>
+    <p>
+      Because HKB Labs neither receives nor stores any personal data about you, there is no data to
+      retain or delete on our servers. Data created in the app stays on your device for as long as the
+      app is installed. You can delete it at any time:
+    </p>
+    <ul>
+      <li>by deleting your lists, stores, or templates directly in the app;</li>
+      <li>by clearing the app's data in your phone settings;</li>
+      <li>by uninstalling the app, which removes all local data.</li>
+    </ul>
+
+    <h2>Technical data processed by third parties</h2>
+    <p>
+      The App Store, Google Play, and our host (GitHub Pages) may automatically process minimal
+      technical data (connection logs, download statistics, or crash reports provided by the store)
+      independently of HKB Labs. Such processing is governed by the respective privacy policies of
+      Apple, Google, and GitHub. HKB Labs may view aggregated, anonymous statistics provided by the
+      stores (download counts, crash reports), with no ability to identify an individual user.
+    </p>
+
+    <h2>Children's privacy</h2>
+    <p>
+      Our applications are not directed to children under 13 and do not knowingly collect any data
+      about them. If you believe a child has provided us with data, please contact us; since no data
+      is stored on our side, no server-side deletion will be required.
+    </p>
+
+    <h2>Your rights</h2>
+    <p>
+      The General Data Protection Regulation (GDPR) grants you rights of access, rectification,
+      erasure, objection, and portability. Because HKB Labs holds no personal data about you, these
+      rights have no object with respect to us: you retain full control of your data directly on your
+      device (see “Data retention and deletion”). For any question, contact us at
+      <a href="mailto:hkb.labs.contact@gmail.com" style="color:var(--brass);font-weight:600;">hkb.labs.contact@gmail.com</a>.
+      If you believe your rights are not being respected, you may lodge a complaint with the French
+      data protection authority (CNIL,
+      <a href="https://www.cnil.fr/en" style="color:var(--brass);font-weight:600;">www.cnil.fr</a>).
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      This policy may be updated, in particular when features or new applications are added. The
+      “Effective” date at the top of this page indicates the most recent version. Significant changes
+      will be announced in the relevant application or on this page.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      For any question about this privacy policy:
+      <a href="mailto:hkb.labs.contact@gmail.com" style="color:var(--brass);font-weight:600;">hkb.labs.contact@gmail.com</a>
+    </p>
+  </div>
+
 </main>
 
 <footer>
   <div class="wrap">
     <span class="footer-copy">© 2026 HKB Labs</span>
     <ul class="footer-links">
-      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html"><span data-lang="fr">Accueil</span><span data-lang="en">Home</span></a></li>
       <li><a href="mailto:hkb.labs.contact@gmail.com">Contact</a></li>
     </ul>
   </div>
 </footer>
+
+<script>
+  window.HKB_TITLES = {
+    fr: "Politique de confidentialité — HKB Labs",
+    en: "Privacy Policy — HKB Labs"
+  };
+  window.HKB_DESCRIPTIONS = {
+    fr: "Politique de confidentialité de HKB Labs et de ses applications, dont LYSOMBA.",
+    en: "Privacy policy of HKB Labs and its applications, including LYSOMBA."
+  };
+</script>
+<script src="lang.js"></script>
 
 </body>
 </html>
