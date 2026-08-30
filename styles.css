@@ -378,28 +378,34 @@ h2.section-title {
   margin: 0;
 }
 
-.project-brand {
+.project-card-top {
   display: flex;
   align-items: center;
-  gap: 13px;
-  min-height: 52px;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 44px;
+}
+
+.project-card-top .status-tag {
+  align-self: center;
 }
 
 .project-logo-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 11px;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
   flex-shrink: 0;
   display: block;
   border: 1px solid rgba(20, 33, 61, 0.08);
-  box-shadow: 0 1px 3px rgba(20, 33, 61, 0.14), 0 5px 12px rgba(20, 33, 61, 0.12);
+  box-shadow: 0 1px 3px rgba(20, 33, 61, 0.14), 0 4px 10px rgba(20, 33, 61, 0.12);
 }
 
 .project-logo-wordmark {
-  height: 52px;
+  height: 40px;
   width: auto;
-  max-width: 100%;
+  max-width: 55%;
   display: block;
+  flex-shrink: 0;
 }
 
 .visually-hidden {
