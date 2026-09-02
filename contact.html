@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demander un devis — HKB Labs</title>
+<meta name="description" content="Décrivez votre projet — application, site web, refonte, outil métier. HKB Labs revient vers vous sous 48 h ouvrées.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<script>
+  try {
+    var l = localStorage.getItem('hkb-lang');
+    if (l !== 'fr' && l !== 'en') l = (navigator.language || '').slice(0, 2).toLowerCase() === 'en' ? 'en' : 'fr';
+  } catch (e) { var l = 'fr'; }
+  document.documentElement.setAttribute('data-lang', l);
+  document.documentElement.lang = l;
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="HKB Labs — accueil">
+      <svg viewBox="0 0 165.01 94" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M5 14 L5 0 L16 7 L20 0 L24 7 L35 0 L35 14 Z" fill="none" stroke="#14213D" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M5 14 L35 14 L35 42 C35 60 20 70 20 70 C20 70 5 60 5 42 Z" fill="none" stroke="#14213D" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M24 20 L12 46 L19 46 L16 64 L32 38 L23 38 Z" fill="#14213D"/>
+        <path d="M55.00,5.00 L62.73,5.00 L62.73,16.43 L74.15,16.43 L74.15,5.00 L81.88,5.00 L81.88,35.00 L74.15,35.00 L74.15,22.28 L62.73,22.28 L62.73,35.00 L55.00,35.00 L55.00,5.00 Z M89.44,5.00 L97.17,5.00 L97.17,15.95 L108.32,5.00 L117.30,5.00 L102.86,19.21 L118.79,35.00 L109.11,35.00 L97.17,23.18 L97.17,35.00 L89.44,35.00 L89.44,5.00 Z M133.33,16.62 Q135.17,16.62 136.11,15.81 Q137.05,15.01 137.05,13.44 Q137.05,11.89 136.11,11.08 Q135.17,10.27 133.33,10.27 L129.06,10.27 L129.06,16.62 L133.33,16.62 Z M133.60,29.73 Q135.93,29.73 137.10,28.75 Q138.28,27.77 138.28,25.78 Q138.28,23.83 137.12,22.85 Q135.95,21.88 133.60,21.88 L129.06,21.88 L129.06,29.73 L133.60,29.73 Z M140.79,18.95 Q143.28,19.67 144.64,21.62 Q146.01,23.57 146.01,26.40 Q146.01,30.74 143.08,32.87 Q140.15,35.00 134.16,35.00 L121.32,35.00 L121.32,5.00 L132.94,5.00 Q139.19,5.00 141.99,6.89 Q144.79,8.78 144.79,12.94 Q144.79,15.13 143.76,16.66 Q142.74,18.20 140.79,18.95 Z M121.32,16.62 L131.14,16.62 L131.14,21.88 L121.32,21.88 Z" fill="#14213D" fill-rule="evenodd"/>
+        <path d="M55.00,44.06 L56.48,44.06 L56.48,53.76 L61.80,53.76 L61.80,55.00 L55.00,55.00 L55.00,44.06 Z M86.39,45.52 L84.38,50.96 L88.41,50.96 L86.39,45.52 Z M85.56,44.06 L87.23,44.06 L91.40,55.00 L89.86,55.00 L88.87,52.19 L83.94,52.19 L82.94,55.00 L81.38,55.00 L85.56,44.06 Z M112.46,49.78 L112.46,53.78 L114.83,53.78 Q116.03,53.78 116.60,53.29 Q117.18,52.79 117.18,51.78 Q117.18,50.75 116.60,50.27 Q116.03,49.78 114.83,49.78 L112.46,49.78 Z M112.46,45.28 L112.46,48.58 L114.65,48.58 Q115.73,48.58 116.26,48.17 Q116.80,47.76 116.80,46.93 Q116.80,46.10 116.26,45.69 Q115.73,45.28 114.65,45.28 L112.46,45.28 Z M110.98,44.06 L114.76,44.06 Q116.45,44.06 117.37,44.77 Q118.28,45.47 118.28,46.77 Q118.28,47.77 117.81,48.36 Q117.35,48.96 116.44,49.10 Q117.53,49.34 118.13,50.08 Q118.74,50.83 118.74,51.94 Q118.74,53.40 117.74,54.20 Q116.75,55.00 114.91,55.00 L110.98,55.00 L110.98,44.06 Z M145.35,44.42 L145.35,45.87 Q144.51,45.46 143.77,45.27 Q143.02,45.07 142.32,45.07 Q141.12,45.07 140.46,45.54 Q139.80,46.00 139.80,46.87 Q139.80,47.60 140.24,47.97 Q140.67,48.33 141.89,48.56 L142.78,48.74 Q144.44,49.06 145.23,49.86 Q146.01,50.65 146.01,51.98 Q146.01,53.57 144.95,54.39 Q143.88,55.21 141.83,55.21 Q141.05,55.21 140.17,55.04 Q139.30,54.86 138.36,54.52 L138.36,52.99 Q139.26,53.50 140.13,53.76 Q140.99,54.01 141.83,54.01 Q143.09,54.01 143.78,53.51 Q144.47,53.01 144.47,52.09 Q144.47,51.29 143.97,50.83 Q143.48,50.38 142.35,50.15 L141.45,49.98 Q139.80,49.65 139.05,48.94 Q138.32,48.24 138.32,46.99 Q138.32,45.54 139.34,44.70 Q140.36,43.87 142.15,43.87 Q142.92,43.87 143.72,44.01 Q144.52,44.15 145.35,44.42 Z" fill="#6B6B63"/>
+      </svg>
+    </a>
+    <div class="header-right">
+      <nav class="main-nav">
+        <a href="index.html#about"><span data-lang="fr">À propos</span><span data-lang="en">About</span></a>
+        <a href="index.html#projects"><span data-lang="fr">Projets</span><span data-lang="en">Projects</span></a>
+        <a href="contact.html"><span data-lang="fr">Contact</span><span data-lang="en">Contact</span></a>
+        <a href="privacy.html"><span data-lang="fr">Confidentialité</span><span data-lang="en">Privacy</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap contact-page">
+
+  <div class="contact-head">
+    <h1 data-lang="fr">Parlons de votre projet</h1>
+    <h1 data-lang="en">Let’s talk about your project</h1>
+    <p class="lead" data-lang="fr">Décrivez ce que vous avez en tête — application, site web, refonte, CRM ou outil métier. On revient vers vous sous 48 h ouvrées avec une première lecture et les prochaines étapes.</p>
+    <p class="lead" data-lang="en">Tell us what you have in mind — app, website, redesign, CRM or business tool. We’ll get back to you within 2 business days with a first read and the next steps.</p>
+  </div>
+
+  <div class="contact-layout">
+
+    <aside class="contact-aside">
+      <h2 data-lang="fr">Comment ça se passe</h2>
+      <h2 data-lang="en">How it works</h2>
+      <ol class="steps">
+        <li><span class="step-n">1</span><span><span data-lang="fr">Vous décrivez votre projet, même en quelques lignes.</span><span data-lang="en">You describe your project, even in a few lines.</span></span></li>
+        <li><span class="step-n">2</span><span><span data-lang="fr">On revient vers vous sous 48 h ouvrées pour en discuter.</span><span data-lang="en">We reply within 2 business days to discuss it.</span></span></li>
+        <li><span class="step-n">3</span><span><span data-lang="fr">On cadre ensemble le périmètre, le calendrier et le devis.</span><span data-lang="en">Together we scope the work, timeline and quote.</span></span></li>
+      </ol>
+      <p class="contact-direct" data-lang="fr">Vous préférez l’e-mail ?<br><a href="mailto:hkb.labs.contact@gmail.com">hkb.labs.contact@gmail.com</a></p>
+      <p class="contact-direct" data-lang="en">Prefer email?<br><a href="mailto:hkb.labs.contact@gmail.com">hkb.labs.contact@gmail.com</a></p>
+    </aside>
+
+    <div class="contact-form-wrap">
+      <form id="contact-form" class="contact-form" action="/api/contact" method="POST" novalidate>
+
+        <div class="hp" aria-hidden="true">
+          <label>Ne pas remplir ce champ
+            <input type="text" name="fax" tabindex="-1" autocomplete="off">
+          </label>
+        </div>
+        <input type="hidden" name="_t" id="form-ts" value="">
+        <input type="hidden" name="lang" id="form-lang" value="fr">
+        <input type="hidden" name="projectType" id="project-type" value="">
+
+        <fieldset>
+          <legend data-lang="fr">Votre projet</legend>
+          <legend data-lang="en">Your project</legend>
+
+          <div class="field">
+            <span class="field-label" data-lang="fr">Type de projet</span>
+            <span class="field-label" data-lang="en">Project type</span>
+            <div class="chips" role="group" aria-label="Type de projet / Project type">
+              <button type="button" class="chip" data-value="app" aria-pressed="false"><span data-lang="fr">Application mobile</span><span data-lang="en">Mobile app</span></button>
+              <button type="button" class="chip" data-value="web" aria-pressed="false"><span data-lang="fr">Site web</span><span data-lang="en">Website</span></button>
+              <button type="button" class="chip" data-value="refonte" aria-pressed="false"><span data-lang="fr">Refonte de site</span><span data-lang="en">Site redesign</span></button>
+              <button type="button" class="chip" data-value="outil" aria-pressed="false"><span data-lang="fr">CRM / outil métier</span><span data-lang="en">CRM / business tool</span></button>
+              <button type="button" class="chip" data-value="autre" aria-pressed="false"><span data-lang="fr">Autre</span><span data-lang="en">Other</span></button>
+            </div>
+            <p class="field-error" data-error-for="projectType" hidden><span data-lang="fr">Choisissez un type de projet.</span><span data-lang="en">Please choose a project type.</span></p>
+          </div>
+
+          <div class="field">
+            <label for="timeline"><span data-lang="fr">Échéance souhaitée</span><span data-lang="en">Desired timeline</span> <span class="opt" data-lang="fr">(optionnel)</span><span class="opt" data-lang="en">(optional)</span></label>
+            <select id="timeline" name="timeline"><option value=""></option></select>
+          </div>
+
+          <div class="field">
+            <label for="message"><span data-lang="fr">Décrivez votre projet</span><span data-lang="en">Describe your project</span></label>
+            <textarea id="message" name="message" rows="6" required minlength="15" placeholder=""></textarea>
+            <p class="field-hint" data-lang="fr">Objectif, contexte, où vous en êtes, contraintes éventuelles.</p>
+            <p class="field-hint" data-lang="en">Goal, context, where you stand, any constraints.</p>
+            <p class="field-error" data-error-for="message" hidden><span data-lang="fr">Décrivez votre projet en quelques mots (15 caractères minimum).</span><span data-lang="en">Please describe your project in a few words (15 characters minimum).</span></p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-lang="fr">Vous</legend>
+          <legend data-lang="en">You</legend>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="name"><span data-lang="fr">Nom</span><span data-lang="en">Name</span></label>
+              <input id="name" name="name" type="text" required autocomplete="name">
+              <p class="field-error" data-error-for="name" hidden><span data-lang="fr">Indiquez votre nom.</span><span data-lang="en">Please enter your name.</span></p>
+            </div>
+            <div class="field">
+              <label for="email"><span data-lang="fr">E-mail</span><span data-lang="en">Email</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email">
+              <p class="field-error" data-error-for="email" hidden><span data-lang="fr">Adresse e-mail invalide.</span><span data-lang="en">Invalid email address.</span></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="company"><span data-lang="fr">Société</span><span data-lang="en">Company</span> <span class="opt" data-lang="fr">(optionnel)</span><span class="opt" data-lang="en">(optional)</span></label>
+            <input id="company" name="company" type="text" autocomplete="organization">
+          </div>
+
+          <div class="field consent">
+            <label>
+              <input type="checkbox" id="consent" name="consent" value="yes" required>
+              <span><span data-lang="fr">J’accepte que ces informations soient utilisées pour traiter ma demande. Voir la <a href="privacy.html">politique de confidentialité</a>.</span><span data-lang="en">I agree that this information will be used to handle my request. See the <a href="privacy.html">privacy policy</a>.</span></span>
+            </label>
+            <p class="field-error" data-error-for="consent" hidden><span data-lang="fr">Vous devez accepter pour envoyer votre demande.</span><span data-lang="en">You must agree in order to send your request.</span></p>
+          </div>
+        </fieldset>
+
+        <p class="form-error-banner" id="form-error" hidden></p>
+
+        <button type="submit" class="btn btn-primary" id="submit-btn"><span data-lang="fr">Envoyer ma demande</span><span data-lang="en">Send my request</span></button>
+
+        <p class="form-foot" data-lang="fr">Réponse sous 48 h ouvrées. Aucune donnée revendue, aucun démarchage sans votre accord.</p>
+        <p class="form-foot" data-lang="en">Reply within 2 business days. No data resold, no marketing without your consent.</p>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="footer-copy">© 2026 HKB Labs</span>
+    <ul class="footer-links">
+      <li><a href="index.html"><span data-lang="fr">Accueil</span><span data-lang="en">Home</span></a></li>
+      <li><a href="privacy.html"><span data-lang="fr">Confidentialité</span><span data-lang="en">Privacy</span></a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  window.HKB_TITLES = {
+    fr: "Demander un devis — HKB Labs",
+    en: "Request a quote — HKB Labs"
+  };
+  window.HKB_DESCRIPTIONS = {
+    fr: "Décrivez votre projet — application, site web, refonte, outil métier. HKB Labs revient vers vous sous 48 h ouvrées.",
+    en: "Tell us about your project — app, website, redesign, business tool. HKB Labs replies within 2 business days."
+  };
+</script>
+<script src="lang.js"></script>
+<script src="contact.js"></script>
+
+</body>
+</html>
