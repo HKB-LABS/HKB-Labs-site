@@ -560,35 +560,47 @@ html[data-lang="en"] [data-lang="fr"] { display: none !important; }
 
 /* ---------- Page contact / demande de devis ---------- */
 
-.contact-page { padding: 60px 0 100px; }
-
-.contact-head { max-width: 620px; margin-bottom: 48px; }
-.contact-head h1 {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
-  letter-spacing: -0.01em;
-  margin: 0 0 16px;
-}
-.contact-head .lead { font-size: 17px; color: var(--ink-70); margin: 0; }
+.contact-page { padding: 56px 0 100px; }
 
 .contact-layout {
   display: grid;
-  grid-template-columns: 290px 1fr;
-  gap: 56px;
+  grid-template-columns: 350px 1fr;
+  gap: 52px;
   align-items: start;
 }
 
-.contact-aside { position: sticky; top: 188px; }
+.contact-aside {
+  position: sticky;
+  top: 190px;
+  align-self: start;
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.contact-aside h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+.contact-intro {
+  font-size: 15px;
+  color: var(--ink-70);
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
 .contact-aside h2 {
   font-family: var(--body);
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--brass);
-  margin: 0 0 20px;
+  margin: 0 0 18px;
 }
-.steps { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 18px; }
+.steps { list-style: none; margin: 0 0 26px; padding: 0; display: grid; gap: 16px; }
 .steps li {
   display: grid;
   grid-template-columns: 24px 1fr;
@@ -771,8 +783,8 @@ html[data-lang="en"] [data-lang="fr"] { display: none !important; }
   .project-grid { grid-template-columns: 1fr; }
   .section-head { flex-direction: column; align-items: flex-start; }
   .section-note { text-align: left; }
-  .contact-layout { grid-template-columns: 1fr; gap: 32px; }
-  .contact-aside { position: static; }
+  .contact-layout { grid-template-columns: 1fr; gap: 30px; }
+  .contact-aside { position: static; max-height: none; overflow: visible; }
   .contact-form-wrap { padding: 24px; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
 }
