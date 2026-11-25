@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1456 819" width="1456" height="819" role="img" aria-label="Maquette en construction">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14213D"/>
+      <stop offset="1" stop-color="#0C1428"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.15" r="0.6">
+      <stop offset="0" stop-color="#A9812F" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#A9812F" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="14" fill="#A9812F" fill-opacity="0.10"/>
+      <rect width="5" height="14" fill="#A9812F" fill-opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <rect width="1456" height="819" fill="url(#bg)"/>
+  <rect width="1456" height="819" fill="url(#glow)"/>
+  <rect width="1456" height="819" fill="url(#grid)"/>
+
+  <!-- Fenêtre navigateur en construction -->
+  <g transform="translate(250 130)">
+    <rect width="760" height="500" rx="16" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="2"/>
+    <path d="M0 62H760" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="2"/>
+    <circle cx="34" cy="31" r="7" fill="#A9812F"/>
+    <circle cx="60" cy="31" r="7" fill="#FFFFFF" fill-opacity="0.3"/>
+    <circle cx="86" cy="31" r="7" fill="#FFFFFF" fill-opacity="0.3"/>
+    <rect x="130" y="19" width="420" height="24" rx="12" fill="#FFFFFF" fill-opacity="0.10"/>
+
+    <!-- bloc titre terminé -->
+    <rect x="48" y="104" width="300" height="26" rx="6" fill="#FFFFFF" fill-opacity="0.85"/>
+    <rect x="48" y="146" width="220" height="26" rx="6" fill="#A9812F"/>
+    <rect x="48" y="196" width="340" height="12" rx="6" fill="#FFFFFF" fill-opacity="0.3"/>
+    <rect x="48" y="220" width="300" height="12" rx="6" fill="#FFFFFF" fill-opacity="0.3"/>
+    <rect x="48" y="256" width="140" height="42" rx="21" fill="#A9812F"/>
+
+    <!-- visuel principal en cours (hachuré) -->
+    <rect x="440" y="96" width="272" height="206" rx="12" fill="url(#hatch)" stroke="#A9812F" stroke-width="2" stroke-dasharray="10 8"/>
+    <g transform="translate(576 199)" fill="none" stroke="#A9812F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-34 -22L-62 0L-34 22"/>
+      <path d="M34 -22L62 0L34 22"/>
+      <path d="M10 -34L-10 34"/>
+    </g>
+
+    <!-- cartes à venir (squelettes pointillés) -->
+    <rect x="48" y="342" width="200" height="120" rx="10" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="8 8"/>
+    <rect x="280" y="342" width="200" height="120" rx="10" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="8 8"/>
+    <rect x="512" y="342" width="200" height="120" rx="10" fill="#FFFFFF" fill-opacity="0.03" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="2" stroke-dasharray="8 8"/>
+    <rect x="68" y="366" width="90" height="12" rx="6" fill="#FFFFFF" fill-opacity="0.35"/>
+    <rect x="68" y="392" width="150" height="9" rx="4.5" fill="#FFFFFF" fill-opacity="0.18"/>
+    <rect x="300" y="366" width="90" height="12" rx="6" fill="#FFFFFF" fill-opacity="0.35"/>
+    <rect x="300" y="392" width="150" height="9" rx="4.5" fill="#FFFFFF" fill-opacity="0.18"/>
+  </g>
+
+  <!-- Mobile en construction -->
+  <g transform="translate(1000 210)">
+    <rect width="190" height="390" rx="30" fill="#0C1428" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="3"/>
+    <rect x="62" y="14" width="66" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.18"/>
+    <rect x="22" y="52" width="146" height="90" rx="10" fill="url(#hatch)" stroke="#A9812F" stroke-width="2" stroke-dasharray="8 7"/>
+    <rect x="22" y="164" width="110" height="12" rx="6" fill="#FFFFFF" fill-opacity="0.75"/>
+    <rect x="22" y="190" width="146" height="9" rx="4.5" fill="#FFFFFF" fill-opacity="0.25"/>
+    <rect x="22" y="208" width="120" height="9" rx="4.5" fill="#FFFFFF" fill-opacity="0.25"/>
+    <rect x="22" y="246" width="146" height="44" rx="10" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="7 7"/>
+    <rect x="22" y="304" width="146" height="44" rx="10" fill="#FFFFFF" fill-opacity="0.03" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="2" stroke-dasharray="7 7"/>
+  </g>
+
+  <!-- Pastille de progression -->
+  <g transform="translate(330 668)">
+    <rect width="560" height="76" rx="38" fill="#FFFFFF"/>
+    <circle cx="44" cy="38" r="14" fill="none" stroke="#A9812F" stroke-width="5" stroke-opacity="0.3"/>
+    <path d="M44 24A14 14 0 0 1 58 38" fill="none" stroke="#A9812F" stroke-width="5" stroke-linecap="round"/>
+    <rect x="86" y="26" width="430" height="24" rx="12" fill="#14213D" fill-opacity="0.10"/>
+    <rect x="86" y="26" width="270" height="24" rx="12" fill="#A9812F"/>
+    <rect x="86" y="26" width="270" height="24" rx="12" fill="url(#hatch)"/>
+  </g>
+</svg>
