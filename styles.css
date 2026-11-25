@@ -252,13 +252,13 @@ h1.hero-title em {
   stroke-linecap: round;
   stroke-dasharray: 620;
   stroke-dashoffset: 620;
-  animation: draw 3.6s ease forwards .4s;
+  animation: draw 1.8s ease forwards .2s;
 }
 
 .mark-bolt {
   fill: var(--brass);
   opacity: 0;
-  animation: appear 1s ease forwards 3.4s;
+  animation: appear .5s ease forwards 1.7s;
 }
 
 @keyframes draw { to { stroke-dashoffset: 0; } }
